@@ -13,7 +13,7 @@ export default function isValidPassword(password = "") {
   let newPassword = new Set([...password])
  
   if(newPassword.size < 4) return false;
-  const passwordRegex = /^(?=.*\d+)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]){10}$/gm
+  const passwordRegex = /^(.*\d+)(.*[a-zA-Z]){10}$/gm
 
   return passwordRegex.test(password)
 
