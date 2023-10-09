@@ -5,12 +5,12 @@
  */
 
 // FUNCTION 1
-export default function cntRbt(ls) {
-  var cnt = 0;
-  for (var i = 0; i < ls.length; i++) {
-    if (ls[i] == "R") {
-      cnt++;
-    }
+const countRepetitionsOfLetterR = (word)=> {
+  let count = 0;
+  for(let letter of word){
+    letter == "R" ? count++ : count
   }
-  return cnt;
+  return count;
 }
+
+export default countRepetitionsOfLetterR;
