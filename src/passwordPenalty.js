@@ -12,5 +12,15 @@ export default function penaltyPoints(password = "") {
   // * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   // * * * INSERT YOUR CODE HERE * * * * * * * * * * * * * *
   // * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  //
+    //
+    if(password === '') return 0;
+    let regex = (/([a-z0-9])\1+/gi)
+    let count = 0;
+   let matchArr = (password.match(regex) || 0)
+     if(matchArr === 0) return 0;
+   for(let cha of matchArr){
+      if(cha.length === 2) count+=1
+      if(cha.length > 2) count+=2
+   }
+   return count
 }
