@@ -6,11 +6,7 @@
 
 // FUNCTION 1
 const countRepetitionsOfLetterR = (word)=> {
-  let count = 0;
-  for(let letter of word){
-    letter == "R" ? count++ : count
-  }
-  return count;
+  return word.split('').filter(eachWord => eachWord === "R").length
 }
 
 export default countRepetitionsOfLetterR;

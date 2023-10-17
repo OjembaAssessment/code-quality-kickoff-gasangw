@@ -6,11 +6,7 @@
 
 // FUNCTION 2
 const onlyGetFoods = (items)=> {
-  const ARRAY_OF_FOODS = [];
-  for(let food of items){
-    food.type === "Food" ? ARRAY_OF_FOODS.push(food) : ARRAY_OF_FOODS
-  }
-  return ARRAY_OF_FOODS;
+  return items.filter(foods => foods.type === "Food")
 }
 
 export default onlyGetFoods
