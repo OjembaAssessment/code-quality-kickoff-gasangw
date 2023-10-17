@@ -12,9 +12,6 @@ export default function penaltyPoints(password = "") {
   if(password === null) return 0;
   if (typeof password !== "string") password = String(password);
 
-  // * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  // * * * INSERT YOUR CODE HERE * * * * * * * * * * * * * *
-    //
     // Here the regex groups similar characters together
     const regex = (/([a-z0-9])\1+/gi)
     let count = 0;
