@@ -15,8 +15,10 @@ export default function penaltyPoints(password = "") {
   // * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   // * * * INSERT YOUR CODE HERE * * * * * * * * * * * * * *
     //
-    let regex = (/([a-z0-9])\1+/gi)
+    // Here the regex groups similar characters together
+    const regex = (/([a-z0-9])\1+/gi)
     let count = 0;
+    // check for the matches and if found an array of matches is returned or 0 is returned
    let matchArr = (password.match(regex) || 0)
      if(matchArr === 0) return 0;
    for(let cha of matchArr){
