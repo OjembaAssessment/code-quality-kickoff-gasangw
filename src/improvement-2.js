@@ -4,7 +4,6 @@
  *  PLEASE DO NOT REMOVE `export default function`
  */
 
-// FUNCTION 2
 const onlyGetFoods = (items)=> {
   return items.filter(foods => foods.type === "Food")
 }
