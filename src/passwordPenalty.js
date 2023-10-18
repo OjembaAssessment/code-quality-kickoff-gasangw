@@ -14,13 +14,9 @@ export default function penaltyPoints(password = "") {
 
     // Here this line of code below groups similar characters together
     const regex = (/([a-z0-9])\1+/gi)
-    let count = 0;
-    // check for the matches and if found an array of matches is returned or 0 is returned
    let matchArr = (password.match(regex) || 0)
      if(matchArr === 0) return 0;
-   for(let cha of matchArr){
-      if(cha.length === 2) count+=1
-      if(cha.length >= 3) count+=2
-   }
-   return count
+    return matchArr.reduce((count, currentValue) => {
+     return currentValue.length === 2 ? count += 1 : currentValue.length >= 3 ? count+= 2 : count
+    }, 0)
 }

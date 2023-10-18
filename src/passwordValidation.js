@@ -16,17 +16,7 @@ export default function isValidPassword(password = "") {
   const passwordRegex = /^(.*\d+)(.*[a-zA-Z]){10}$/gm
 
   return passwordRegex.test(password)
-
-  // * * * YOUR CODE GOES IN HERE ... * * *
-  /*
-   * if (password is not exactly 10 digits or characters...) {
-   *   return ...;
-   * }
-   *
-   * if (is not composed by digits and numbers) {
-   *   return ...;
-   * }
-   */
+ 
   const setOfPassword = new Set([...password]);
   if (setOfPassword.size < 4) return false;
   return true;
