@@ -11,13 +11,10 @@ export default function penaltyPoints(password = "") {
 
   if(password === null) return 0;
   if (typeof password !== "string") password = String(password);
-
-  // * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  // * * * INSERT YOUR CODE HERE * * * * * * * * * * * * * *
-    //
-    let regex = (/([a-z0-9])\1+/gi)
-    let count = 0;
-   let matchArr = (password.match(regex) || 0)
+  // This line of code below helps in grouping similar characters together
+    const regex = (/([a-z0-9])\1+/gi)
+    const count = 0;
+    const matchArr = (password.match(regex) || 0)
      if(matchArr === 0) return 0;
    for(let cha of matchArr){
       if(cha.length === 2) count+=1

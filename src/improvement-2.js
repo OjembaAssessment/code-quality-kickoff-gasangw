@@ -5,8 +5,6 @@
  */
 
 // FUNCTION 2
-const onlyGetFoods = (items)=> {
-  return items.filter(foods => foods.type === "Food")
-}
+const onlyGetFoods = (items)=> items.filter(foods => foods.type === "Food")
 
 export default onlyGetFoods

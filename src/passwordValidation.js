@@ -13,6 +13,7 @@ export default function isValidPassword(password = "") {
   let newPassword = new Set([...password])
  
   if(newPassword.size < 4) return false;
+  // the regex below ensures that the string is of length 10,includes digits, both lowercase and uppercase.
   const passwordRegex = /^(.*\d+)(.*[a-zA-Z]){10}$/gm
 
   return passwordRegex.test(password)

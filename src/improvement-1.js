@@ -5,8 +5,6 @@
  */
 
 // FUNCTION 1
-const countRepetitionsOfLetterR = (word)=> {
-  return word.split('').filter(eachWord => eachWord === "R").length
-}
+const countRepetitionsOfLetterR = (word)=>  word.split('').filter(eachWord => eachWord === "R").length;
 
 export default countRepetitionsOfLetterR;
