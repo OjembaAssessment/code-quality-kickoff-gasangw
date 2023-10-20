@@ -17,8 +17,11 @@ export default function penaltyPoints(password = "") {
     const matchArr = (password.match(regex) || 0)
      if(matchArr === 0) return 0;
    for(let cha of matchArr){
-      if(cha.length === 2) count+=1
-      if(cha.length >= 3) count+=2
+      if(cha.length === 2){ 
+        count+=1
+      } else {
+         count+=2
+      }
    }
    return count
 }
